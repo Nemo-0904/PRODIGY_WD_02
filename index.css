@@ -51,6 +51,21 @@
 /* Laps */
 
 .laps {
+<<<<<<< HEAD
+    text-align: center;
+    color: black;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: "Macondo", cursive;
+    height: 6rem;
+    /* Adjust the height as needed */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+    scrollbar-color: #a5bab9 #d6dddd;
+    scrollbar-width: 3rem;
+    scroll-behavior: smooth;
+=======
         text-align: center;
         color: black;
         margin-top: 15px;
@@ -62,10 +77,11 @@
         scrollbar-color: #a5bab9 #d6dddd;
         scrollbar-width: 3rem;
         scroll-behavior: smooth;
+>>>>>>> 20ea2ab2c8ab024f86b52ec32cbd11a7107a2d46
 
 
 
-    }
+}
 
 
 /* Action Buttons */
@@ -76,12 +92,20 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     /* Adjust column width for responsiveness */
     grid-gap: 30px;
+<<<<<<< HEAD
+    font-family: "Macondo", cursive;
+=======
 font-family: "Macondo", cursive;
+>>>>>>> 20ea2ab2c8ab024f86b52ec32cbd11a7107a2d46
 }
 
 .action button {
     padding: 10px 20px;
+<<<<<<< HEAD
+    font-family: "Macondo", cursive;
+=======
 font-family: "Macondo", cursive;
+>>>>>>> 20ea2ab2c8ab024f86b52ec32cbd11a7107a2d46
     background-color: #fff;
     color: #141313;
     border: none;
