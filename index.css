@@ -31,12 +31,12 @@
     width: 100%;
     background: rgb(201, 223, 223);
     padding: 40px 0;
-    font-family: "Jacquarda Bastarda 9", serif;
+    font-family: "Macondo", cursive;
     color: rgb(16, 2, 2);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
+    font-size: 7rem;
     border-radius: 10px 10px 10px 10px;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
         rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -55,8 +55,9 @@
         color: black;
         margin-top: 15px;
         text-decoration: none;
-        font-family: "Pixelify Sans", sans-serif;
-        height: 7rem; /* Adjust the height as needed */
+        font-size: 2rem;
+        font-family: "Macondo", cursive;
+        height: 6rem; /* Adjust the height as needed */
         overflow-y: auto;/* Enable vertical scrolling */
         scrollbar-color: #a5bab9 #d6dddd;
         scrollbar-width: 3rem;
@@ -75,12 +76,12 @@
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     /* Adjust column width for responsiveness */
     grid-gap: 30px;
-    font-family: "Pixelify Sans", sans-serif;
+font-family: "Macondo", cursive;
 }
 
 .action button {
     padding: 10px 20px;
-    font-family: "Pixelify Sans", sans-serif;
+font-family: "Macondo", cursive;
     background-color: #fff;
     color: #141313;
     border: none;
