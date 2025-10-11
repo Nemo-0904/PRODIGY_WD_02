@@ -1,42 +1,45 @@
-⏱️ Analog & Digital Stopwatch
-A modern, responsive web application combining an analog stopwatch face with a digital time display and a scrollable lap recording feature.
+# ⏱️ Analog & Digital Stopwatch  
 
-✨ Features
-Dual Display: Simultaneously shows time on a smooth-moving analog clock face and a precise digital display (HH:MM:SS:MS).
+A **modern, responsive web application** that seamlessly combines an **analog stopwatch face** with a **digital time display** and a **scrollable lap recording feature**.  
+Built for **precision**, **smooth animations**, and **cross-device compatibility**.
 
-Precision: Tracks time down to the hundredth of a second (ms).
+---
 
-Smooth Analog Hands: The minute and hour hands move continuously, not just jumping on the second, thanks to fractional rotation calculations.
+## ✨ Features  
 
-Lap Functionality: Record and display lap times in a dedicated, scrollable section.
+- 🕒 **Dual Display:**  
+  View elapsed time simultaneously on a **smooth analog clock face** and a **precise digital display** (HH:MM:SS:MS).  
 
-Intuitive Controls: Dedicated buttons for Start, Pause, Reset, Lap, and Clear Laps.
+- ⚙️ **High Precision:**  
+  Tracks time accurately up to **hundredths of a second (milliseconds)**.  
 
-Responsive Design: Optimized for both desktop (side-by-side watch and laps) and mobile devices (stacked layout).
+- 🎡 **Smooth Analog Animation:**  
+  Analog hands move **continuously** using fractional degree calculations — no jumping seconds!  
 
-🚀 Getting Started
-Prerequisites
-You only need a modern web browser to run this application.
+- 🏁 **Lap Recording:**  
+  Record multiple laps, which are displayed in a **dedicated, scrollable list**.  
 
-Installation
-Clone the repository (if applicable):
+- 🎮 **Intuitive Controls:**  
+  Includes buttons for **Start**, **Pause**, **Reset**, **Lap**, and **Clear Laps**.  
 
-Bash
+- 📱 **Responsive Design:**  
+  Built with **Flexbox** and **media queries** for seamless layouts:  
+  - **Desktop:** Side-by-side stopwatch and laps  
+  - **Mobile:** Stacked, compact layout  
 
-git clone [YOUR_REPO_URL]
-Save the files: Ensure you have the following three files in the same directory:
+---
 
-index.html (The structure)
+## 🚀 Getting Started  
 
-index.css (The styling and layout)
+<details>
+<summary><strong>📦 Prerequisites</strong></summary>
+<br>
+You only need a **modern web browser** (like Chrome, Edge, or Firefox).  
+No installations, compilers, or dependencies required.
+</details>
 
-app.js (The logic/functionality)
+---
 
-Run: Open the index.html file directly in your web browser.
-
-🛠️ Technology Stack
-HTML5: Structure and semantic organization.
-
-CSS3: Styling, Flexbox for the side-by-side layout, and responsiveness (@media queries).
-
-JavaScript (ES6+): Core timing logic (setInterval), DOM manipulation, and mathematical calculations for smooth analog hand rotation.
+<details>
+<summary><strong>💾 Installation & Setup</strong></summary>
+<br>
