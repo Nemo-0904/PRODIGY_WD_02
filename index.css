@@ -1,3 +1,6 @@
+/* Import Google Fonts (Include this in your HTML <head> if you haven't) */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;500&display=swap'); */
+
 /* Global Styles */
 * {
     margin: 0;
@@ -8,95 +11,292 @@
 /* Container */
 .container {
     width: 80%;
-    /* Adjust width for responsiveness */
     min-width: 300px;
-    /* Ensure a minimum width for smaller screens */
     max-width: 800px;
-    /* Set a maximum width for larger screens */
     position: absolute;
     top: 50%;
     left: 50%;
-    right: 50%;
     transform: translate(-50%, -50%);
     background: rgb(12, 166, 177);
+    /* Theme Primary Teal */
     padding-bottom: 60px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    /* Cleaner, modern shadow for container */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
-/* Timer Display */
+/* --- NEW LAYOUT STYLES FOR WATCH AND LAPS --- */
+
+/* Wrapper for side-by-side layout */
+.top-section {
+    display: flex;
+    /* Enable Flexbox for side-by-side arrangement */
+    justify-content: space-around;
+    /* Changed alignment to center the items vertically */
+    align-items: center;
+    /* Original was align-items: flex-start; now centered for visual balance */
+    padding: 30px 20px 0;
+    /* Add overall padding */
+    gap: 20px;
+    /* Space between the watch and laps */
+}
+
+/* --- WATCH INTERFACE STYLES (Clock Size Increased from prior step) --- */
+
+/* Adjust Watch Interface within its column */
+.watch-interface {
+    padding: 0;
+    flex: 0 0 50%;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+/* The circular face: INCREASED SIZE */
+.watch-face {
+    position: relative;
+    width: 330px;
+    /* Increased Size */
+    height: 330px;
+    /* Increased Size */
+    border-radius: 50%;
+    background: #E0F7FA;
+    border: 10px solid #00BCD4;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/* Digital Timer Display: Adjusted proportionally */
 .timer-display {
-    width: 100%;
-    background: rgb(201, 223, 223);
-    padding: 40px 0;
-    font-family: "Macondo", cursive;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    font-size: 1.75rem;
+    /* Larger font */
+    font-family: 'Roboto Mono', monospace;
     color: rgb(16, 2, 2);
+    font-weight: 700;
+    box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 7rem;
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-        rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-        rgba(241, 234, 234, 0.1) 0px -79px 40px 0px inset,
-        rgba(0, 0, 0, 0.06) 0px 2px 1px,
-        rgba(0, 0, 0, 0.09) 0px 4px 2px,
-        rgba(0, 0, 0, 0.09) 0px 8px 4px,
-        rgba(0, 0, 0, 0.09) 0px 16px 8px,
-        rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-/* Laps */
+/* General Hand Styling: Adjusted proportionally */
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom center;
+    transition: transform 0.05s linear;
+}
+
+.second-hand {
+    width: 2px;
+    height: 45%;
+    background: red;
+    z-index: 3;
+}
+
+.minute-hand {
+    width: 4px;
+    height: 40%;
+    background: #333;
+    z-index: 2;
+}
+
+.hour-hand {
+    width: 6px;
+    height: 30%;
+    background: #111;
+    z-index: 1;
+}
+
+/* Center dot */
+.watch-face::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #1e5a5f;
+    z-index: 4;
+}
+
+/* Optional: Adding clock ticks for realism */
+.watch-face::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 15px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+/* --- LAPS SECTION WRAPPER & HEADER --- */
+
+/* Wrapper for the LAPS section (Header + List) */
+.laps-wrapper {
+    flex: 1;
+    /* Allow wrapper to take remaining space */
+    min-width: 150px;
+    /* Total height of the header (30px) + the list (180px) = 210px */
+    height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center the items within the column */
+}
+
+.laps-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+    /* Space between header and list */
+    width: 100%;
+    text-align: center;
+    /* Add a small vertical padding for visual separation */
+    padding: 0 0 5px 0;
+}
+
+
+/* --- LAPS LIST STYLES (Adjusted to fit inside the wrapper) --- */
 
 .laps {
+    /* Set flex: 1 so the list takes up all available space inside the laps-wrapper */
+    flex: 1;
+
+    min-width: 150px;
+    /* FONT SIZE DECREASED */
+    font-size: 1.2rem;
+
     text-align: center;
     color: black;
-    margin-top: 15px;
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: "Macondo", cursive;
-    height: 6rem;
-    /* Adjust the height as needed */
+    padding: 0 20px;
+    list-style: none;
     overflow-y: auto;
-    /* Enable vertical scrolling */
-    scrollbar-color: #a5bab9 #d6dddd;
-    scrollbar-width: 3rem;
     scroll-behavior: smooth;
 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    /* Firefox Scrollbar Styling */
+    scrollbar-color: #a5bab9 #d6dddd;
+    scrollbar-width: thin;
 }
 
+.laps li {
+    /* Reduced padding for smaller items */
+    padding: 3px 0;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+}
 
-/* Action Buttons */
+.laps li:last-child {
+    border-bottom: none;
+}
+
+/* WebKit (Chrome, Safari, Edge) Scrollbar Styling */
+.laps::-webkit-scrollbar {
+    width: 8px;
+}
+
+.laps::-webkit-scrollbar-track {
+    background: #d6dddd;
+    border-radius: 10px;
+}
+
+.laps::-webkit-scrollbar-thumb {
+    background-color: #a5bab9;
+    border-radius: 10px;
+    border: 2px solid #d6dddd;
+}
+
+/* --- ACTION BUTTONS STYLES --- */
+
 .action {
     width: 85%;
-    margin: 60px auto 0 auto;
+    /* Reduced margin to account for taller clock and better vertical centering */
+    margin: 30px auto 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    /* Adjust column width for responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 30px;
-    font-family: "Macondo", cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 .action button {
     padding: 10px 20px;
-    font-family: "Macondo", cursive;
+    font-family: 'Roboto', sans-serif;
     background-color: #fff;
-    color: #141313;
-    border: none;
+    color: #333;
+    border: 3px solid transparent;
     font-size: 18px;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-        rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-        rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: all 0.2s ease-in-out;
 }
 
-button:hover {
-    background-color: #a7eeee;
-    color: #062720;
-    border: 3px solid #1e5a5f;
-    padding: 7px 17px;
+/* Highlight the primary action button (Start/Pause) */
+.action button:first-child {
+    background-color: #4CAF50;
+    color: white;
+    box-shadow: rgba(76, 175, 80, 0.4) 0px 4px 12px;
+}
+
+/* Hover state for all buttons */
+.action button:hover {
+    background-color: #00BCD4;
+    color: white;
+    border-color: #00BCD4;
+    padding: 10px 20px;
+}
+
+/* Specific hover state for the primary button */
+.action button:first-child:hover {
+    background-color: #66BB6A;
+    border-color: #66BB6A;
+}
+
+
+/* --- RESPONSIVE STYLES (REQUIRED FOR MOBILE) --- */
+
+@media (max-width: 650px) {
+    .top-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .watch-interface,
+    .laps-wrapper {
+        /* Changed to laps-wrapper */
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .laps-wrapper {
+        /* Total height adjustment for stacked mobile view */
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .laps {
+        height: 10rem;
+        /* Keeps the scrollable list at 10rem on mobile */
+    }
 }
