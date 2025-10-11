@@ -27,19 +27,4 @@ Built for **precision**, **smooth animations**, and **cross-device compatibility
   - **Desktop:** Side-by-side stopwatch and laps  
   - **Mobile:** Stacked, compact layout  
 
----
 
-## 🚀 Getting Started  
-
-<details>
-<summary><strong>📦 Prerequisites</strong></summary>
-<br>
-You only need a **modern web browser** (like Chrome, Edge, or Firefox).  
-No installations, compilers, or dependencies required.
-</details>
-
----
-
-<details>
-<summary><strong>💾 Installation & Setup</strong></summary>
-<br>
