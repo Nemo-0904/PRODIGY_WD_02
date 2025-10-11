@@ -1,52 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
   <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <title>Analog Digital Stopwatch</title>
 
-   <!-- <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Macondo&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="index.css" />
   </head>
-
   <body>
-
     <div class="container">
+      <div class="top-section">
+        <div class="watch-interface">
+          <div class="watch-face">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
 
-      <div class="timer-display">00:00:00:00</div>
-
-      <ul div class="laps">00:00:00:00</ul>
-
-        <div class="action">
-
-          <button id="startTimer" onclick="start()">Start</button>
-
-          <button id="pauseTimer" onclick="pause()">Pause</button>
-
-          <button id="resetTime" onclick="reset()">Reset</button>
-
-          <button id="restartTimer" onclick="restart()">Restart</button>
-
-          <button id="lap" onclick="lap()">Lap</button>
-
-          <button id="resetLap" onclick="resetLap()">Reset Lap</button>
-          
-
+            <div class="timer-display">00:00:00:00</div>
+          </div>
         </div>
 
-      <div>
+       <div class="laps-wrapper"> 
+            <h2 class="laps-header">LAPS</h2>
+            <ul class="laps"></ul>
+      </div>
+      <div class="action">
+        <button id="startTimer" class="start-pause-btn" onclick="start()">
+          Start
+        </button>
+        <button id="pauseTimer" onclick="pause()">Pause</button>
+        <button id="resetTime" onclick="reset()">Reset</button>
 
+        <button id="lap" onclick="lap()">Lap</button>
+        <button id="resetLap" onclick="resetLap()">Clear Laps</button>
+      </div>
     </div>
-    
 
-    <script src="app.js"> </script>
-
+    <script src="app.js"></script>
   </body>
-
 </html>
