@@ -4,6 +4,9 @@ A **modern, responsive web application** that seamlessly combines an **analog st
 Built for **precision**, **smooth animations**, and **cross-device compatibility**.
 
 ---
+> 🧩 **Project Context:**  
+> This project was developed as part of my **internship**, focusing on applying front-end web development concepts such as responsive UI design, DOM manipulation, and real-time event handling.
+
 
 ## ✨ Features  
 
